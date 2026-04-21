@@ -1,5 +1,5 @@
 main {
-  max-width: 740px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 2rem 1.5rem 4rem;
 }
@@ -42,7 +42,7 @@ figcaption {
   text-align: center;
 }
 
-.affinity-diagram-row{
+.affinity-diagram-row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
@@ -55,7 +55,7 @@ figcaption {
 
 .affinity-diagram-row figure img {
   width: 100%;
-  height: 220px;
+  height: 320px;
   object-fit: cover;
   object-position: top;
   display: block;
@@ -83,7 +83,9 @@ figcaption {
 
 .fidelity-rows figure img {
   width: 100%;
-  height: auto;
+  height: 260px;
+  object-fit: cover;
+  object-position: top;
   display: block;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
