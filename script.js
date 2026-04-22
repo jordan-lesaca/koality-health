@@ -29,3 +29,35 @@ prevBtn.addEventListener('click', () => {
 });
 
 updateCarousel();
+
+const tfCards = document.querySelectorAll('.taskflow-card');
+const tfNextBtn = document.getElementById('tfNextBtn');
+const tfPrevBtn = document.getElementById('tfPrevBtn');
+
+let tfCurrent = 1;
+const tfTotal = tfCards.length;
+
+function getTfIndex(offset) {
+  return (tfCurrent + offset + tfTotal) % tfTotal;
+}
+
+function updateTaskflowCarousel() {
+  tfCards.forEach((card) => {
+    card.className = 'taskflow-card hidden';
+  });
+  tfCards[getTfIndex(-1)].className = 'taskflow-card back-left';
+  tfCards[tfCurrent].className = 'taskflow-card center';
+  tfCards[getTfIndex(1)].className = 'taskflow-card back-right';
+}
+
+tfNextBtn.addEventListener('click', () => {
+  tfCurrent = getTfIndex(1);
+  updateTaskflowCarousel();
+});
+
+tfPrevBtn.addEventListener('click', () => {
+  tfCurrent = getTfIndex(-1);
+  updateTaskflowCarousel();
+});
+
+updateTaskflowCarousel();
