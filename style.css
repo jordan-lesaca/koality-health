@@ -254,3 +254,31 @@ figcaption {
 .carousel-wrapper.taskflow-carousel .carousel {
   height: 800px; 
 }
+
+.evolution-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.evolution-grid figure {
+  margin: 0;
+}
+
+.evolution-grid figure img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.evolution-grid figcaption {
+  font-size: 0.82rem;
+  color: #6b7280;
+  margin-top: 0.4rem;
+  text-align: center;
+}
