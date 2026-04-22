@@ -44,10 +44,18 @@ p {
 }
 
 .hero {
-  background-color: #EEF5F5;
+  background-color: #191c1c;
   padding: 3rem 1.5rem;
   margin-bottom: 2rem;
   border-radius: 12px;
+}
+
+.hero h1 {
+  color: #FFFFFF;
+}
+
+.hero p {
+  color: #EEF5F5;
 }
 
 section {
