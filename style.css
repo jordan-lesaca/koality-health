@@ -209,9 +209,9 @@ figcaption {
 }
 
 .taskflow-card.center {
-  width: 78%;
-  height: 700px;
-  left: 11%;
+  width: 90%;
+  height: 950px;
+  left: 5%;
   top: 0;
   opacity: 1;
   z-index: 3;
