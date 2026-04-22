@@ -97,3 +97,92 @@ figcaption {
   margin-top: 0.4rem;
   text-align: center;
 }
+
+.carousel-wrapper {
+  position: relative;
+  width: 1540px;
+  max-width: 100%;
+  height: 450px;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-card {
+  position: absolute;
+  transition: all 0.4s ease-out;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.carousel-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-card.center {
+  width: 1540px;
+  height: 450px;
+  left: 0px;
+  top: 0px;
+  opacity: 1;
+  z-index: 3;
+  filter: blur(0px);
+}
+
+.carousel-card.back-left {
+  width: 1001px;
+  height: 293px;
+  left: -200px;
+  top: 79px;
+  opacity: 0.6;
+  z-index: 1;
+  filter: blur(2px);
+}
+
+.carousel-card.back-right {
+  width: 1001px;
+  height: 293px;
+  left: 739px;
+  top: 79px;
+  opacity: 0.6;
+  z-index: 1;
+  filter: blur(2px);
+}
+
+.carousel-card.hidden {
+  width: 1001px;
+  height: 293px;
+  left: 1600px;
+  top: 79px;
+  opacity: 0;
+  z-index: 0;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.carousel-controls button {
+  background: teal;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.carousel-controls button:hover {
+  background: orange;
+}
