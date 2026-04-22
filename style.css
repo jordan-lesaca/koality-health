@@ -210,7 +210,7 @@ figcaption {
 
 .taskflow-card.center {
   width: 78%;
-  height: 1300px;
+  height: 700px;
   left: 11%;
   top: 0;
   opacity: 1;
@@ -220,9 +220,9 @@ figcaption {
 
 .taskflow-card.back-left {
   width: 52%;
-  height: 357px;
+  height: 455px;
   left: -6%;
-  top: 97px;
+  top: 125px;
   opacity: 0.6;
   z-index: 1;
   filter: blur(2px);
@@ -230,9 +230,9 @@ figcaption {
 
 .taskflow-card.back-right {
   width: 52%;
-  height: 357px;
+  height: 455px;
   right: -6%;
-  top: 97px;
+  top: 125px;
   opacity: 0.6;
   z-index: 1;
   filter: blur(2px);
@@ -248,9 +248,9 @@ figcaption {
 }
 
 .carousel-wrapper.taskflow-carousel {
-  height: 620px; 
+  height: 770px; 
 }
 
 .carousel-wrapper.taskflow-carousel .carousel {
-  height: 550px; 
+  height: 1000px; 
 }
