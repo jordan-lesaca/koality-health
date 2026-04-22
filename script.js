@@ -1,4 +1,7 @@
 const cards = document.querySelectorAll('.carousel-card');
+const nextBtn = document.getElementById('nextBtn');
+const prevBtn = document.getElementById('prevBtn');
+
 let current = 1;
 const total = cards.length;
 
@@ -7,20 +10,23 @@ function getIndex(offset) {
 }
 
 function updateCarousel() {
-  cards.forEach(card => {
+  cards.forEach((card) => {
     card.className = 'carousel-card hidden';
   });
+
   cards[getIndex(-1)].className = 'carousel-card back-left';
   cards[current].className = 'carousel-card center';
   cards[getIndex(1)].className = 'carousel-card back-right';
 }
 
-document.getElementById('nextBtn').addEventListener('click', () => {
+nextBtn.addEventListener('click', () => {
   current = getIndex(1);
   updateCarousel();
 });
 
-document.getElementById('prevBtn').addEventListener('click', () => {
+prevBtn.addEventListener('click', () => {
   current = getIndex(-1);
   updateCarousel();
 });
+
+updateCarousel();
