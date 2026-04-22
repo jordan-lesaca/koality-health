@@ -1,5 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FFFCF4;
+  color: #191C1C;
+}
+
 main {
-  max-width: 1000px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 2rem 1.5rem 4rem;
 }
@@ -7,6 +16,7 @@ main {
 h1 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  color: #191C1C;
 }
 
 h2 {
@@ -14,21 +24,40 @@ h2 {
   margin-top: 2.5rem;
   margin-bottom: 0.75rem;
   padding-left: 0.75rem;
-  border-left: 3px solid #2a9d8f;
+  border-left: 3px solid #168E9A;
+  color: #191C1C;
 }
 
 h3 {
   font-size: 1.1rem;
+  font-weight: 600;
   margin-top: 2rem;
-  margin-bottom: 0.5rem;
-  color: #333;
+  margin-bottom: 0.75rem;
+  color: #2E3434;
 }
 
 p {
   font-size: 1rem;
   line-height: 1.75;
   margin-bottom: 1.25rem;
-  color: #333;
+  color: #2E3434;
+}
+
+.hero {
+  background-color: #EEF5F5;
+  padding: 3rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+}
+
+section {
+  border-bottom: 1px solid #EEF5F5;
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+}
+
+section:last-child {
+  border-bottom: none;
 }
 
 figure {
@@ -38,43 +67,47 @@ figure {
 figure img {
   width: 100%;
   display: block;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #EEF5F5;
   border-radius: 8px;
 }
 
 figcaption {
   font-size: 0.85rem;
-  color: #6b7280;
+  color: #2E3434;
   margin-top: 0.5rem;
   text-align: center;
 }
 
-.affinity-diagram-row {
+.evolution-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin: 1.5rem 0;
 }
 
-.affinity-diagram-row figure {
+.evolution-grid figure {
   margin: 0;
 }
 
-.affinity-diagram-row figure img {
+.evolution-grid figure img {
   width: 100%;
-  height: 320px;
+  height: 220px;
   object-fit: cover;
   object-position: top;
   display: block;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #EEF5F5;
   border-radius: 8px;
 }
 
-.affinity-diagram-row figcaption {
+.evolution-grid figcaption {
   font-size: 0.82rem;
-  color: #6b7280;
+  color: #2E3434;
   margin-top: 0.4rem;
   text-align: center;
+}
+
+#review-low-fig img {
+  object-position: bottom;
 }
 
 .fidelity-rows {
@@ -94,14 +127,50 @@ figcaption {
   object-fit: cover;
   object-position: top;
   display: block;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #EEF5F5;
   border-radius: 8px;
 }
 
 .fidelity-rows figcaption {
   font-size: 0.82rem;
-  color: #6b7280;
+  color: #2E3434;
   margin-top: 0.4rem;
+  text-align: center;
+}
+
+.prototype-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.prototype-grid figure {
+  margin: 0;
+}
+
+.prototype-grid figure img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  border: 1px solid #EEF5F5;
+  border-radius: 8px;
+}
+
+.prototype-grid figure.full-width {
+  grid-column: 1 / -1;
+}
+
+.prototype-grid figure.full-width img {
+  height: 300px;
+}
+
+.prototype-grid figcaption {
+  font-size: 0.85rem;
+  color: #2E3434;
+  margin-top: 0.5rem;
   text-align: center;
 }
 
@@ -127,7 +196,7 @@ figcaption {
   background: white;
   display: flex;
   flex-direction: row;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #EEF5F5;
 }
 
 .carousel-card img {
@@ -177,25 +246,12 @@ figcaption {
   z-index: 0;
 }
 
-.carousel-controls {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 1rem;
+.carousel-wrapper.taskflow-carousel {
+  height: 900px;
 }
 
-.carousel-controls button {
-  background: teal;
-  color: white;
-  border: none;
-  padding: 0.5rem 1.5rem;
-  font-size: 1.2rem;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.carousel-controls button:hover {
-  background: orange;
+.carousel-wrapper.taskflow-carousel .carousel {
+  height: 800px;
 }
 
 .taskflow-card {
@@ -204,7 +260,7 @@ figcaption {
   border-radius: 12px;
   overflow: hidden;
   background: white;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #EEF5F5;
 }
 
 .taskflow-card img {
@@ -213,6 +269,7 @@ figcaption {
   object-fit: contain;
   object-position: center;
   display: block;
+  background: white;
 }
 
 .taskflow-card.center {
@@ -226,106 +283,53 @@ figcaption {
 }
 
 .taskflow-card.back-left {
-  width: 52%;
-  height: 455px;
-  left: -6%;
-  top: 125px;
+  width: 60%;
+  height: 520px;
+  left: -8%;
+  top: 140px;
   opacity: 0.6;
   z-index: 1;
   filter: blur(2px);
 }
 
 .taskflow-card.back-right {
-  width: 52%;
-  height: 455px;
-  right: -6%;
-  top: 125px;
+  width: 60%;
+  height: 520px;
+  right: -8%;
+  top: 140px;
   opacity: 0.6;
   z-index: 1;
   filter: blur(2px);
 }
 
 .taskflow-card.hidden {
-  width: 52%;
-  height: 240px;
+  width: 60%;
+  height: 520px;
   left: 110%;
-  top: 65px;
+  top: 140px;
   opacity: 0;
   z-index: 0;
 }
 
-.carousel-wrapper.taskflow-carousel {
-  height: 900px; 
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
 }
 
-.carousel-wrapper.taskflow-carousel .carousel {
-  height: 800px; 
-}
-
-.evolution-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin: 1.5rem 0;
-}
-
-.evolution-grid figure {
-  margin: 0;
-}
-
-.evolution-grid figure img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  object-position: top;
-  display: block;
-  border: 1px solid #e5e7eb;
+.carousel-controls button {
+  background: #168E9A;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.2rem;
   border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
 }
 
-.evolution-grid figcaption {
-  font-size: 0.82rem;
-  color: #6b7280;
-  margin-top: 0.4rem;
-  text-align: center;
+.carousel-controls button:hover {
+  background: #191C1C;
 }
 
-.evolution-grid figure:first-child img {
-  object-position: bottom;
-}
-
-.prototype-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin: 1.5rem 0;
-}
-
-.prototype-grid figure {
-  margin: 0;
-}
-
-.prototype-grid figure img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  object-position: top;
-  display: block;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-}
-
-.prototype-grid figure.full-width {
-  grid-column: 1 / -1;
-}
-
-.prototype-grid figure.full-width img {
-  height: 300px;
-}
-
-.prototype-grid figcaption {
-  font-size: 0.85rem;
-  color: #6b7280;
-  margin-top: 0.5rem;
-  text-align: center;
-}
