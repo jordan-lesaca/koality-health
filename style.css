@@ -17,6 +17,13 @@ h2 {
   border-left: 3px solid #2a9d8f;
 }
 
+h3 {
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
 p {
   font-size: 1rem;
   line-height: 1.75;
@@ -281,4 +288,8 @@ figcaption {
   color: #6b7280;
   margin-top: 0.4rem;
   text-align: center;
+}
+
+.evolution-grid figure:first-child img {
+  object-position: bottom;
 }
